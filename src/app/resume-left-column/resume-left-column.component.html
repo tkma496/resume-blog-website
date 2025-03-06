@@ -1,0 +1,41 @@
+<div class="left-column">
+    <!-- Contact Section -->
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Contact</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-list>
+          <a mat-list-item href="'mailto:' + data?.contact?.email">
+            <mat-icon>email</mat-icon> {{ data?.contact?.email }}
+          </a>
+          <a mat-list-item href="data?.contact?.linkedin" target="_blank">
+            <mat-icon>linkedin</mat-icon> LinkedIn
+          </a>
+          <a mat-list-item href="data?.contact?.github" target="_blank">
+            <mat-icon>code</mat-icon> GitHub
+          </a>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+<!-- Skills Section -->
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Skills</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let skill of data.skills">
+          <div class="skill-item">
+            <span class="skill-name">{{ skill.name }}</span>
+            <div class="rating-circles">
+              <mat-icon *ngFor="let circle of [1, 2, 3, 4, 5]" class="circle">
+                {{ circle <= skill.rating ? 'circle' : 'panorama_fish_eye' }}
+              </mat-icon>
+            </div>
+          </div>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+  </div>

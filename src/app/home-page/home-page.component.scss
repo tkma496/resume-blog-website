@@ -1,0 +1,41 @@
+$primary-color: #3f51b5;
+$secondary-color: #ff4081;
+//
+//This line can be used to create styles based on screen size,
+//so in the example below anything included in the curly brackets would 
+//for screens that are 600px or less. This is how you make a screen design be reactive.
+//@media only screen and (max-width: 600px){}
+.homepage-container {
+    //padding: 4px;
+    max-width: 100vw;
+    max-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #fcfcfc;
+    .homepage-title-card {
+        .mdc-card__media {
+            background-image: url('../../assets/Homepage HD belt.jpg'); 
+            background-size: cover;
+            background-position: center;
+            align-items: flex-start;
+            width: auto;
+            height: 100vh;
+            //object-fit: cover; 
+            //object-position: top;
+        }
+    }
+    .mat-grid-list {
+        border: 1px solid;
+
+        .mat-mdc-grid-tile {
+            align-items: flex-start;
+            border: 1px solid;
+            width:auto;
+            .mat-mdc-card {
+                background-color: #915bf5;
+            }
+        }
+    }
+}

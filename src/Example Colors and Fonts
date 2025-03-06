@@ -1,0 +1,100 @@
+
+//fonts
+//-----
+//heading
+//-----
+//Anton
+//Fjalla One
+//Archivo Black
+//Arsenal SC
+//Bangers
+//Ultra
+//Michroma
+//Voltaire
+//Cinzel
+//Coromant Garamond
+//Castoro Titling
+//Poiret One
+//-----
+//Body
+/----
+// roboto
+// inter
+// noto sans
+// noto serif
+// assistant
+//Patrick Hand
+//Red Hat Text
+//Hubot Sans
+//Voltaire
+//Redit Sans
+//-----
+//Quotes
+//-------
+//Nothing You Could Do
+//Gochi Hand
+//-----
+//Colors
+//-----
+//night #0A0F0D
+//raisin black(very slight purpple hue) #1A1B25
+//gunmetal grey #1E2D2F
+//grey #565656
+//silver #C4CBCA
+//eggshell #E0E0CE
+//linen #F9EBE0
+//licorice (dark maroon) #220C10
+//scarlet red #FF2E00
+//bright red orange #EF3E36
+//bright red orange 2 #FF4A1C
+//bright red-orange 3 #FF2A0C
+//darker gold #CB770D
+//gold #DC851F
+//orange #FEA82F
+//soft orange #C57B57
+//even softer orange #F1AB86
+
+//dark grey brown #2E282A
+//neon green #84C318
+//light neon green
+//pale yellow #F1AB86
+//yellow-yellow #EFCA08
+//egg yolk yellow #F5AA00
+//dark yellow #F2AF29
+//tangerine #F08700
+//light blue #BBDEF0
+//light blue grey #9DB4AB
+//bright blue #276FBF
+//blue jeans blue #183059
+//burnt blue grey #4A6D7C
+//prussian blue #102E4A
+//oxford blue #0D2149
+//paynes grey blue #546A7B
+
+
+.home-page {
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-color: #000; 
+    background-position: center;
+    /* Add other background properties as needed, e.g., background-position */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+
+        align-items: flex-start;
+        gap: 16px;  
+        max-width: 100%;
+        max-height: 100%;
+        width: 100vw;
+        height: auto;
+        object-fit: cover; 
+        object-position: top;

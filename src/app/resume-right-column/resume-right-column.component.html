@@ -1,0 +1,30 @@
+<div class="right-column">
+    <!-- Experience Section -->
+    <mat-card *ngFor="let exp of data?.experience">
+        <mat-card-header>
+            <mat-card-title>{{ exp.company }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div *ngFor="let role of exp.roles" class="role-item">
+                <h4>{{ role.role }}</h4>
+                <p class="duration">{{ role.duration }}</p>
+                <p class="description">{{ role.description }}</p>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <!-- Education Section -->
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Education</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-list>
+                <mat-list-item *ngFor="let institution of data.education" class="institution">
+                    <h4>{{ institution }}</h4>
+                    <p class="duration">{{ institution.duration }}</p>
+                </mat-list-item>
+            </mat-list>
+        </mat-card-content>
+    </mat-card>
+</div>
+

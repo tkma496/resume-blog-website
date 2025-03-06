@@ -1,0 +1,27 @@
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; // Adds spacing between cards
+    padding: 16px;
+  }
+  
+  mat-card {
+    width: 100%;
+  }
+  
+  mat-list-item {
+    padding: 8px 0;
+  }
+
+  .role-item {
+    margin-bottom: 16px; // Adds spacing between roles
+  }
+  
+  .duration {
+    font-style: italic;
+    color: #666; // Gray color for duration text
+  }
+  
+  .description {
+    margin-top: 8px; // Adds spacing between duration and description
+  }
