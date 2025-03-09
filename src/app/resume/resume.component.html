@@ -1,6 +1,6 @@
 <div class="resume-container">
-  <mat-grid-list cols="1" rowheight="auto">
-    <mat-grid-tile>
+  <!--<mat-grid-list cols="1" rowheight="fit">
+    <mat-grid-tile>-->
       <mat-card>
         <mat-card-header class="stacked-header">
           <div mat-card-avatar class="header-image"></div>
@@ -12,28 +12,28 @@
               </div>
         </mat-card-header>
       </mat-card>
-    </mat-grid-tile>
+    <!--</mat-grid-tile>
   </mat-grid-list>
-  <mat-grid-list cols="2" rowheight="auto" gutterSize="16px">
-    <mat-grid-tile>
-      <!--<div class="columns-container">-->
+  <mat-grid-list cols="2" rowheight="auto" gutterSize="2px">
+    <mat-grid-tile>-->
+      <div class="columns-container">
         <!-- Left Column -->
          <mat-card style="width: 100%;">
-        <!--<div class="left-column">-->
+        <div class="left-column">
           <app-resume-left-column [data]="resumeData.leftColumn"></app-resume-left-column>
-        <!--</div>-->
+        </div>
       </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile>
+      <!--</mat-grid-tile>
+      <mat-grid-tile>-->
         <!-- Right Column -->
          <mat-card style="width: 100%;">
-        <!--<div class="right-column">-->
+        <div class="right-column">
           <app-resume-right-column [data]="resumeData.rightColumn"></app-resume-right-column>
-        <!--</div>-->
+        </div>
       </mat-card>
       <!--</div>-->
-    </mat-grid-tile>
-  </mat-grid-list>
+    <!--</mat-grid-tile>
+  </mat-grid-list>-->
 
 </div>
 

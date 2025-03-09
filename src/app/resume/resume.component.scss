@@ -4,12 +4,23 @@ $secondary-color: #ff4081;
 .resume-container {
   max-width: 1200px;
   margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
+  .mat-grid-list{
+  display: flex;
+  flex-direction: column;
+max-height: fit-content;
+    .mat-grid-tile {
+      display: flex;
+
+    }
+  }
   .mat-mdc-card {
     .mat-mdc-card-header {
-        align-items: flex-start;
+        //align-items: flex-start;
+        background-size: contain;
+        background-position: center;
         gap: 16px; 
         margin: 16px;
       .header-image {
@@ -39,7 +50,7 @@ $secondary-color: #ff4081;
   .columns-container {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 2px  ;
     .left-column {
       flex: 1; // Takes up 1 part of the available space
       max-width: 300px; // Adjust the width of the left column

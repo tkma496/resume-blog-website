@@ -21,21 +21,32 @@ $secondary-color: #ff4081;
             background-position: center;
             align-items: flex-start;
             width: auto;
-            height: 100vh;
+            height: auto;
             //object-fit: cover; 
             //object-position: top;
         }
     }
-    .mat-grid-list {
-        border: 1px solid;
 
-        .mat-mdc-grid-tile {
-            align-items: flex-start;
-            border: 1px solid;
-            width:auto;
-            .mat-mdc-card {
-                background-color: #915bf5;
+    .mat-grid-list{
+        .mat-grid-tile{
+            background-color:#ff4081;
+            .service-card{
+                .development-service-image{
+                    background-image: url('../../assets/webdev.jpg'); 
+                }
+                .mat-mdc-card-footer{
+                    text-align: center;
+                    font-weight: bold;
+
+                }
             }
         }
     }
+    
+    //.services-container{
+    //    display: grid;
+    //    grid-template-columns: repeat(3, 1fr);
+    //    grid-gap: 10px;
+    //}
+
 }
