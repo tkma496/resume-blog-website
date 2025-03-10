@@ -1,7 +1,16 @@
 <mat-toolbar color="primary" font-color="accent">
+    <button mat-icon-button class="menu-icon" matTooltip="Menu" aria-label="Menu">
+        <mat-icon>menu</mat-icon>
+    </button>
     <span>Nolan Hansen</span>
     <span class="spacer"></span>
-    <a mat-button routerLink="/">Home</a>
+    <button mat-icon-button class="home-icon" matTooltip="Home" aria-label="Home" routerLink="/">
+        <mat-icon>home</mat-icon>
+    </button>
+    <!--<a mat-button routerLink="/">Home</a>-->
     <a mat-button routerLink="/resume">Resume</a>
     <a mat-button routerLink="/blog">Blog</a>
+    <button mat-icon-button class="more-icon" matTooltip="More" aria-label="More">
+        <mat-icon>more_vert</mat-icon>
+    </button>
 </mat-toolbar>

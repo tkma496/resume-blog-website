@@ -1,49 +1,170 @@
 
 @use '@angular/material' as mat;
+@use './themes/light-hc' as light-hc-theme;
+@use './themes/light-mc' as light-mc-theme;
+//@use './themes/light-color' as light-color;
 
 // Include Angular Material core styles
 @include mat.core();
 
 // Define your color palettes using Material 3’s theming APIs.
-$primary-palette: mat.define-palette(mat.$indigo-palette);
-$accent-palette: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$black-palette: mat.define-palette((
+  50: #ececec,
+  100: #d6d6d6,
+  200: #c7c7c7,
+  300: #b9b9b9,
+  400: #9e9d9d,
+  500: #7c7c7c,
+  600: #5c5c5c,
+  700: #414040,
+  800: #1f1e1e,
+  900: #000000,
+  A100: #d8d8d8,
+  A200: #8d8d8d,
+  A400: #3f3f3f,
+  A700: #000000,
+  contrast: (
+    50: #ffffff,
+    100: #ffffff,
+    200: #ffffff,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    8anti-aliasing0: #ffffff,
+    900: #ffffff,
+    A100: #ffffff,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff,
+  )
+));
+
+$yellow-palette: mat.define-palette((
+  50: #fffde7,
+  100: #fff9c4,
+  200: #fff59d,
+  300: #fff176,
+  400: #ffee58,
+  500: #ffeb3b,
+  600: #fdd835,
+  700: #fbc02d,
+  800: #f9a825,
+  900: #f57f17,
+  A100: #ffff8d,
+  A200: #ffff00,
+  A400: #ffea00,
+  A700: #ffc400,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  )
+));
+$blue-palette: mat.define-palette((
+  50: #e7f9ff,
+  100: #d5f2fc,
+  200: #97e4fd,
+  300: #6dc8fd,
+  400: #aecfff,
+  500: #7eb1fd,
+  600: #5e9efd,
+  700: #3a88fc,
+  800: #1471fc,
+  900: #0366fa,
+  A100: #e7f9ff,
+  A200: #97e4fd,
+  A400: #5e9efd,
+  A700: #0366fa,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  )
+));
+
+$primary-palette: mat.define-palette($black-palette);
+$accent-palette: mat.define-palette($yellow-palette, A200, A100, A400);
+$tertiary-palette: mat.define-palette($blue-palette, A200, A100, A400);
 $warn-palette: mat.define-palette(mat.$red-palette);
 
+// Define typography config
+$typography-config: mat.define-typography-config(
+  $font-family: 'Red Hat Display',
+  $headline-1: mat.define-typography-level(96px, 96px, 300, $font-family: 'Anton'),
+  $headline-2: mat.define-typography-level(60px, 60px, 300, $font-family: 'Anton'),
+  $headline-3: mat.define-typography-level(48px, 48px, 400, $font-family: 'Anton'),
+  $body-1: mat.define-typography-level(16px, 24px, 400),
+  $body-2: mat.define-typography-level(14px, 20px, 400),
+);
+
 // Create your custom theme.
-$my-app-theme: mat.define-light-theme((
+$theme: mat.define-dark-theme((
   color: (
     primary: $primary-palette,
     accent: $accent-palette,
+    tertiary: $tertiary-palette,
     warn: $warn-palette,
+    //background:
+    //foreground:
   ),
   // You can customize typography here if needed.
   //typography: mat.define-typography-config()
-  typography: (
-    //headers
-     brand-family: 'Anton',
-    //body
-     plain-family: 'Red Hat Display',
-     //font weights
-     bold-weight: 900,
-     medium-weight: 500,
-     regular-weight: 200,
-    ),
+  typography: $typography-config,
+  density: 0,
 ));
 
-html {
-  @include mat.core-theme($theme);
-  @include mat.button-theme($theme);
-  @media (prefers-color-scheme: light) {
-    @include mat.core-color($light-theme);
-  }
+// Create your custom theme.
+//$light-theme: mat.define-light-theme((
+//  color: (
+//    primary: 
+//  ) light-color.$light-color-scheme,
+  // You can customize typography here if needed.
+  //typography: mat.define-typography-config()
+//  typography: $typography-config,
+//  density: 0,
+//));
+
+html{
+//  @extend .light-color;
+  @include mat.all-component-themes($theme);
 }
-// Include the theme styles for only specified components
-@include mat.all-component-themes($theme-palette);
 
 .bg-color-black {
   background-color:black;
 }
 
+
+mat-card {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 10px 7px;
+}
 // Global styles
 body {
   font-family: Arimo, serif;

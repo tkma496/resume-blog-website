@@ -1,5 +1,4 @@
-$primary-color: #3f51b5;
-$secondary-color: #ff4081;
+
 //
 //This line can be used to create styles based on screen size,
 //so in the example below anything included in the curly brackets would 
@@ -15,6 +14,8 @@ $secondary-color: #ff4081;
 
     background-color: #fcfcfc;
     .homepage-title-card {
+        margin: 0px;
+        padding: 0px;
         .mdc-card__media {
             background-image: url('../../assets/Homepage HD belt.jpg'); 
             background-size: cover;
@@ -29,7 +30,7 @@ $secondary-color: #ff4081;
 
     .mat-grid-list{
         .mat-grid-tile{
-            background-color:#ff4081;
+            //background-color:#ff4081;
             .service-card{
                 .development-service-image{
                     background-image: url('../../assets/webdev.jpg'); 

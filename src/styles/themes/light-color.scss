@@ -1,4 +1,7 @@
-.light {
+
+@use '@angular/material' as mat;
+
+.light-color {
   --md-sys-color-primary: rgb(0 0 0);
   --md-sys-color-surface-tint: rgb(94 94 94);
   --md-sys-color-on-primary: rgb(255 255 255);
@@ -48,4 +51,50 @@
   --md-sys-color-surface-container: rgb(241 237 236);
   --md-sys-color-surface-container-high: rgb(235 231 231);
   --md-sys-color-surface-container-highest: rgb(229 226 225);
+};
+
+.light-color{
+  primary: var(--md-sys-color-primary),
+  on-primary: var(--md-sys-color-on-primary),
+  primary-container: var(--md-sys-color-primary-container),
+  on-primary-container: var(--md-sys-color-on-primary-container),
+  inverse-primary: var(--md-sys-color-inverse-primary),
+  primary-fixed: var(--md-sys-color-primary-fixed),
+  on-primary-fixed: var(--md-sys-color-on-primary-fixed),
+  primary-fixed-dim: var(--md-sys-color-primary-fixed-dim),
+  on-primary-fixed-variant: var(--md-sys-color-on-primary-fixed-variant),
+
+secondary: var(--md-sys-color-secondary),
+on-secondary: var(--md-sys-color-on-secondary),
+secondary-container: var(--md-sys-color-secondary-container),
+on-secondary-container: var(--md-sys-color-on-secondary-container),
+secondary-fixed: var(--md-sys-color-secondary-fixed),
+on-secondary-fixed: var(--md-sys-color-on-secondary-fixed),
+secondary-fixed-dim: var(--md-sys-color-secondary-fixed-dim),
+on-secondary-fixed-variant: var(--md-sys-color-on-secondary-fixed-variant),
+
+  tertiary: var(--md-sys-color-tertiary),
+  on-tertiary: var(--md-sys-color-on-tertiary),
+  tertiary-fixed: var(--md-sys-color-tertiary-fixed),
+  on-tertiary-fixed: var(--md-sys-color-on-tertiary-fixed),
+  tertiary-fixed-dim: var(--md-sys-color-tertiary-fixed-dim),
+  on-tertiary-fixed-variant: var(--md-sys-color-on-tertiary-fixed-variant),
+
+  surface: var(--md-sys-color-surface),
+  on-surface: var(--md-sys-color-on-surface),
+  surface-variant: var(--md-sys-color-surface-variant),
+  on-surface-variant: var(--md-sys-color-on-surface-variant),
+  color-outline: var(--md-sys-color-outline),
+  on-color-outline: var(--md-sys-color-outline-variant),
+  color-shadow: var(--md-sys-color-shadow),
+  color-scrim: var(--md-sys-color-scrim),
+  inverse-surface: var(--md-sys-color-inverse-surface),
+  on-inverse-surface: var(--md-sys-color-inverse-on-surface),
+  surface-dim: var(--md-sys-color-surface-dim),
+  surface-bright: var(--md-sys-color-surface-bright),
+  surface-container-lowest: var(--md-sys-color-surface-container-lowest),
+  surface-container-low: var(--md-sys-color-surface-container-low),
+  surface-container: var(--md-sys-color-surface-container),
+  surface-container-high: var(--md-sys-color-surface-container-high),
+  surface-container-highest: var(--md-sys-color-surface-container-highest),
 }
