@@ -1,78 +1,23 @@
 <div class="resume-container">
-  <!--<mat-grid-list cols="1" rowheight="fit">
-    <mat-grid-tile>-->
-      <mat-card>
-        <mat-card-header class="stacked-header">
-          <div mat-card-avatar class="header-image"></div>
-              <div class="header-text">
-                <mat-card-title>Nolan Hansen</mat-card-title> 
-                <mat-card-subtitle>IT Leader & Architect</mat-card-subtitle>
-                <p class="mat-caption"><br />"If you can't explain it simply, you don't understand it well enough." <br /> -Albert Einstein</p>
-                <p class="mat-caption"></p>
-              </div>
-        </mat-card-header>
-      </mat-card>
-    <!--</mat-grid-tile>
-  </mat-grid-list>
-  <mat-grid-list cols="2" rowheight="auto" gutterSize="2px">
-    <mat-grid-tile>-->
-      <div class="columns-container">
-        <!-- Left Column -->
-         <mat-card style="width: 100%;">
-        <div class="left-column">
-          <app-resume-left-column [data]="resumeData.leftColumn"></app-resume-left-column>
+  <div class="resume-header-container">
+    <mat-card class="resume-header-card">
+      <mat-card-header class="resume-header-card-header">
+        <div mat-card-avatar class="header-image"></div>
+        <div class="header-text">
+          <mat-card-title >{{resumeData.resume.name}}</mat-card-title> 
+          <mat-card-subtitle>{{resumeData.resume.title}}</mat-card-subtitle>
+          <p class="mat-caption"><br />{{resumeData.resume.quote}}<br /> -{{resumeData.resume.quoteAuthor}}</p>
+          <p class="mat-caption"></p>
         </div>
-      </mat-card>
-      <!--</mat-grid-tile>
-      <mat-grid-tile>-->
-        <!-- Right Column -->
-         <mat-card style="width: 100%;">
-        <div class="right-column">
-          <app-resume-right-column [data]="resumeData.rightColumn"></app-resume-right-column>
-        </div>
-      </mat-card>
-      <!--</div>-->
-    <!--</mat-grid-tile>
-  </mat-grid-list>-->
-
-</div>
-
-<!-- <div class="container">
-
-      <mat-card-content>
-        <h2>IT Leader</h2>
-        <p>
-        -->
-          <!-- TODO: Add your personal summary here -->
-<!--        </p>
-        <h2>Experience</h2>
-        <mat-list>
-            <h3 matLine>Kohl's Department Stores</h3>
-        -->
-            <!-- TODO: Add your work experience items here -->
-<!--
-                      <mat-list-item>
-            <div class="mat-mdc-title">Senior Manager Developer Platform</div>
-            <div class="mat-mdc-daterange">June 2020 - July 2022</div>
-          </mat-list-item>
-        </mat-list>
-        <h2>Education</h2>
-        <mat-list>
-        -->
-          <!-- TODO: Add your education items here -->
-<!--
-          <mat-list-item>
-            <h3 matLine>University of Wisconsin-Milwaukee</h3>
-            <h3 matLine>Waukesha County Technical College</h3>
-          </mat-list-item>
-        </mat-list>
-        <h2>Skills</h2>
-        <p>
-        -->
-          <!-- TODO: Add your skills here -->
-<!--
-        </p>
-      </mat-card-content>
+      </mat-card-header>
     </mat-card>
   </div>
--->
+  <div class="columns-container">
+    <mat-card class="left-column-container-card">
+      <app-resume-left-column [data]="resumeData.resume.leftColumn"></app-resume-left-column>
+    </mat-card>
+    <mat-card class="right-column-container-card">
+      <app-resume-right-column [data]="resumeData.resume.rightColumn"></app-resume-right-column>
+    </mat-card>
+  </div>
+</div>

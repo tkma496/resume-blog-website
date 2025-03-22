@@ -1,6 +1,14 @@
 :host {
     display: flex;
     flex-direction: column;
-    min-height: auto;
+    min-height: 100vh;
     background-color: #000;
+  }
+
+  .app-container{
+    height:auto;
+    display: flex;
+    flex-direction:column;
+    flex:1;
+    min-height: 100vh;
   }

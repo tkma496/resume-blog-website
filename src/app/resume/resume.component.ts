@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core"
-import { ResumeDataService } from '../services/resume-data.service'
+import { ResumeDataService } from '../services/resume/resume-data.service'
 import { ResumeData } from './resume-data'
 
 

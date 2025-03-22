@@ -1,18 +1,21 @@
 .right-column {
     display: flex;
     flex-direction: column;
-    gap: 16px; // Adds spacing between cards
-    padding: 16px;
+    //gap: 16px; // Adds spacing between cards
   }
   
   mat-card {
-    width: 100%;
+    mat-card-content{
+      white-space: pre-wrap;
+    }
   }
   
   mat-list-item {
     padding: 8px 0;
   }
-
+  .role{
+    font-weight: bold;
+  }
   .role-item {
     margin-bottom: 16px; // Adds spacing between roles
   }

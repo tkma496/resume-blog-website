@@ -1,23 +1,20 @@
+.app-resume-left-column {
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  height: 100%;
+}
 .left-column {
     display: flex;
     flex-direction: column;
-    gap: 16px; // Adds spacing between cards
-    padding: 16px;
+    justify-content: space-evenly;
+    row-gap: 20px;
   }
-  
-  mat-card {
-    width: 100%;
-  }
-  
-  mat-list-item {
-    padding: 8px 0;
-  }
-  
+
+
   .skill-item {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    flex-direction: column;
   }
   
   .skill-name {
@@ -33,3 +30,9 @@
     font-size: 16px; // Adjust the size of the circles
     color: #3f51b5; // Use Angular Material primary color or any color you prefer
   }
+
+  //.email {
+  //  ::ng-deep .mdc-list-item__content {
+  //    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+  //  }
+ // }

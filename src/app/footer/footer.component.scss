@@ -1,10 +1,11 @@
-footer {
-  display: flex;
-  position: static;
-  background-color: rgb(2, 2, 2);
+footer {  
   z-index: 10;
-  padding: 1rem;
-  text-align: center;
-
-  color: white;
+  display: flex;
+  flex-direction: column;
+  .mat-mdc-card{
+    color: white;
+    background-color: black;
+    border-radius: 0px;
+    border-top: 2px solid grey;
+  }
 }

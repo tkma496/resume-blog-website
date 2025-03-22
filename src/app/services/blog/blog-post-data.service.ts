@@ -6,14 +6,14 @@ import { firstValueFrom } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ResumeDataService {
+export class BlogPostDataService {
   private data: any;
 
   constructor(private http: HttpClient) {}
 
   async loadData(): Promise<any> {
     try {
-      const yamlText = await firstValueFrom(this.http.get('/assets/data/content.en.yaml', { responseType: 'text' }));
+      const yamlText = await firstValueFrom(this.http.get('/assets/data/blog/blogs/.en.yaml', { responseType: 'text' }));
       this.data = yaml.load(yamlText);
       return this.data;
     }

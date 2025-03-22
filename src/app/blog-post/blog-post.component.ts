@@ -1,38 +1,27 @@
 import { Component, type OnInit } from "@angular/core"
 import { ActivatedRoute } from "@angular/router"
+import { BlogDataService } from '../services/blog/blog-list-data.service';
+import { BlogData } from './blog-data';
+import { BlogDataModel } from "./blog-data-model";
 
 @Component({
   selector: "app-blog-post",
-  template: `
-    <div class="container" *ngIf="post">
-      <mat-card>
-        <mat-card-header>
-          <mat-card-title>{{ post.title }}</mat-card-title>
-          <mat-card-subtitle>{{ post.date | date }}</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-          <p>{{ post.content }}</p>
-        </mat-card-content>
-      </mat-card>
-    </div>
-  `,
-  styles: [
-    `
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-  `,
-  ],
+  templateUrl: './blog-post.component.html',
+  styleUrls: ['./blog-post.component.scss'],
 })
+
 export class BlogPostComponent implements OnInit {
   post: any
+  blogPostData: BlogPostDataModel= { blog: { blog_post: [] } };
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private blogPostDataService: BlogPostDataService) {}
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get("id")
+    
+    this.blogPostDataService.loadData().then((data: BlogPostData) => {
+      this.blogPostData = data;
+    });
     // TODO: Fetch the blog post data based on the ID
     this.post = {
       id: 1,
@@ -42,5 +31,3 @@ export class BlogPostComponent implements OnInit {
     }
   }
 }
-
-

@@ -1,8 +1,13 @@
 import { ResumeDataModel } from './resume-data-model'
+
 export class ResumeData implements ResumeDataModel {
-    leftColumn = {
-      name: '',
-      title: '',
+
+ resume = {
+    name: '', 
+    title: '',
+    quote: '',
+    quoteAuthor: '',
+    leftColumn: {
       contact: {
         email: '',
         phone: '',
@@ -10,21 +15,18 @@ export class ResumeData implements ResumeDataModel {
         linkedin: '',
         github: ''
       },
-      skills: {
-        technical: [],
-        soft: []
-      },
-      education: []
-    };
-  
-    rightColumn = {
-      experience: [],
-      projects: []
-    };
-  
-    constructor(data?: Partial<ResumeDataModel>) {
-      if (data) {
-        Object.assign(this, data);
-      }
+      skills: [],
+  },
+
+  rightColumn: {
+    experience: [],
+    education: []
+  }
+  };
+
+  constructor(data?: Partial<ResumeDataModel>) {
+    if (data) {
+      Object.assign(this, data);
     }
   }
+}

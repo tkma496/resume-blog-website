@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ResumeDataModel } from '../resume/resume-data-model';
 
 @Component({
   selector: 'app-resume-left-column',
@@ -7,6 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 
 export class ResumeLeftColumnComponent {
-    @Input() data: any; // Accept data from the parent component
+    @Input() data: ResumeDataModel['resume']['leftColumn'] = {contact: {}, skills: [] }; // Accept data from the parent component
 
 }
