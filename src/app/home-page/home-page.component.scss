@@ -9,91 +9,140 @@
     height: auto;
     flex-direction: column;
     background-color: #fcfcfc;
-    .homepage-title-card {
-        margin: 0px 0px;
-        padding: 0px 0px;
-        display: flex;
-        flex-direction: column;
-        border-radius: 0px;
-        .mdc-card__media {
-            background: url('../../assets/images/Homepage HD belt.jpg') center center no-repeat; 
-            background-size: cover;
-            align-items: flex-start;
-            width: auto;
-            height: auto;
-            margin: 0;
-            padding: 0;
-        }
-        .homepage-title-card-overlay {
-            z-index: 10;  // Ensure it sits on top of the background image
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;  // So that overlay elements don’t block clicks
-            background: rgba(0, 0, 0, 0); // change to reduce semi-transparent background
-            color: rgba(252, 218, 66, 0.6);
-            font-family: 'Anton';
-            font-weight: regular;
-            .homepage-title-card-overlay-box {
-                position: absolute;
-                top: 5%;
-                left: 5%;
-                width: 20%;
-                font-size: clamp(50%,6vw,10000%);
-            }
-            .homepage-title-card-overlay-box-2 {
-                position: absolute;
-                top: 60%;
-                left: 65%;
-                width: 30%;
-                font-size: clamp(50%,8vw,10000%);
-            }
-            .homepage-title-card-overlay-box-3 {
-                position: absolute;
-                top: 80%;
-                left: 70%;
-                width: 30%;
-                font-size: clamp(50%,7vw,10000%);
-            }
-        }
-    }
-    .services-grid-container {
-        display: flex;
-        flex-direction: row;
-        justify-content:space-evenly;
-        align-content:last baseline;
-        column-gap: 15px;
-        //The padding adds the space around the entire container rectangle, the space between the timeline-scope
-        //is set in the html using the gutter modifier
-        padding: 10px;
-        background-color:#000000;
-        .mat-mdc-card{
-            background-position: center;
-            width: 33%;
-        }
-        .mat-mdc-card-header {
-            display: flex;
-            flex-direction: row;
-            padding-left: 10px;
-        }
-        .mat-mdc-card-title {
-            text-transform: uppercase;
-            font-size: clamp(50%, 16vw, 150%);
-        }
-        .mat-mdc-card-subtitle {
-            font-size: clamp(50%, 10vw, 125%);
-            color: rgb(73, 22, 155);
-        }
-        .mat-mdc-card-footer{
-            text-align: center;
-            font-weight: bold;
-        }
+}
+
+.mat-mdc-card.homepage-title-card {
+    margin: 0px 0px;
+    padding: 0px 0px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px;
+    .mdc-card__media {
+        background: url('../../assets/images/Homepage HD belt.jpg') center center no-repeat; 
+        background-size: cover;
+        align-items: flex-start;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
     }
 }
 
-.design-service-card{
-    .development-service-image{
+.homepage-title-card-overlay {
+    z-index: 10;  // Ensure it sits on top of the background image
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;  // So that overlay elements don’t block clicks
+    background: rgba(0, 0, 0, 0); // change to reduce semi-transparent background
+    color: rgba(252, 218, 66, 0.6);
+    font-family: 'Anton';
+    font-weight: regular;
+}
+
+.homepage-title-card-overlay-box {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 20%;
+    font-size: clamp(50%,6vw,10000%);
+}
+
+.homepage-title-card-overlay-box-2 {
+    position: absolute;
+    top: 60%;
+    left: 65%;
+    width: 30%;
+    font-size: clamp(50%,8vw,10000%);
+}
+
+.homepage-title-card-overlay-box-3 {
+    position: absolute;
+    top: 80%;
+    left: 70%;
+    width: 30%;
+    font-size: clamp(50%,7vw,10000%);
+}
+
+.services-grid-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    column-gap: 15px;
+    //The padding adds the space around the entire container rectangle, the space between the timeline-scope
+    //is set in the html using the gutter modifier
+    padding: 10px;
+    background-color:#000000;
+}
+.service-card-container{
+    display: flex;
+    direction: column;
+    flex: 1 1 0;
+    //background-position: center;
+    width: 33%;
+    height: 100%;
+    .mat-mdc-card.mdc-card{
+        flex: 1 1 0;
+        height: 100%;
+    }
+    .mat-mdc-card-header {
+        display: flex;
+        flex-direction: row;
+        padding-left: 10px;
+    }
+    .mat-mdc-card-title {
+        text-transform: uppercase;
+        font-size: clamp(50%, 16vw, 150%);
+    }
+    .mat-mdc-card-subtitle {
+        font-size: clamp(50%, 10vw, 125%);
+        color: rgb(73, 22, 155);
+    }
+    .mat-mdc-card-footer{
+        text-align: center;
+        font-weight: bold;
+    }
+}
+.service-card-header-container, service-card-content-container{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+}
+
+service-card-content-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.service-card-footer-container {
+    margin-top:auto;
+}
+
+
+.service-card#design{
+    .design-service-image{
+        margin-bottom: 0px;
+        //If you want the image square instead of circle, uncomment.
+        //border-radius: 0px;
+        height: 50px;
+        width: 50px;
+        background-image: url('../../assets/images/Software Architecture Icon.jpg'); 
+    }
+}
+.service-card#electronics{
+    .electronics-service-image{
+        margin-bottom: 0px;
+        //If you want the image square instead of circle, uncomment.
+        //border-radius: 0px;
+        height: 50px;
+        width: 50px;
+        background-image: url('../../assets/images/Software Architecture Icon.jpg'); 
+    }
+}
+.service-card#home-maintenance{
+    .home-maintenance-service-image{
         margin-bottom: 0px;
         //If you want the image square instead of circle, uncomment.
         //border-radius: 0px;
