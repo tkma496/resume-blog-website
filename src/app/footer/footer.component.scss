@@ -3,9 +3,18 @@ footer {
   display: flex;
   flex-direction: column;
   .mat-mdc-card{
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 auto;
     color: white;
     background-color: black;
     border-radius: 0px;
     border-top: 2px solid grey;
   }
+}
+.mat-mdc-card-content.mat-mdc-card-content{
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 auto;
+  text-align:center;
 }

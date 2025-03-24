@@ -1,5 +1,27 @@
 .container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - (var(--header-height, 0px) + var(--footer-height, 0px)));
+    max-width: 100%;
+}
+.mat-mdc-card.mdc-card{
+    border-radius: 0;
+}
+.blog-post-card-header{
+    border-radius: 0;
+    flex-direction: row;
+    flex: 0 1 auto;
+    background-color: orange;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    .blog-post-title{
+        --mat-card-title-text-size: clamp(50%, 8vw, 200%);
+    }
+}
+
+.mat-mdc-card-content{
+    //border-radius:0;
+    background-color: white;
+    flex: 1 1 auto;
 }

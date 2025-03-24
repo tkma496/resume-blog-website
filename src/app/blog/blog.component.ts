@@ -10,12 +10,12 @@ import { BlogListDataModel } from "./blog-list-data-model";
 })
 
 export class BlogComponent implements OnInit{
-  blogData: BlogListDataModel= { blog: { blog_list: [] } };
+  blogListData: BlogListDataModel = { blog: { blog_list: [] } };
   constructor( private blogListDataService: BlogListDataService) {};
 
   ngOnInit(): void {
     this.blogListDataService.loadData().then((data: BlogListData) => {
-      this.blogData = data;
+      this.blogListData = data;
     });
   }
 

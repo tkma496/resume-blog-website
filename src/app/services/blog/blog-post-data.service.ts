@@ -11,9 +11,9 @@ export class BlogPostDataService {
 
   constructor(private http: HttpClient) {}
 
-  async loadData(): Promise<any> {
+  async loadData(filePath: string): Promise<any> {
     try {
-      const yamlText = await firstValueFrom(this.http.get('/assets/data/blog/blogs/.en.yaml', { responseType: 'text' }));
+      const yamlText = await firstValueFrom(this.http.get(filePath, { responseType: 'text' }));
       this.data = yaml.load(yamlText);
       return this.data;
     }

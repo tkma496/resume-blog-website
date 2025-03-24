@@ -1,5 +1,5 @@
 export interface BlogPostDataModel {
-    blog: {
+    blogData: {
       id: number;
       title?: string;
       date?: string;

@@ -62,27 +62,43 @@
         display: flex;
         flex-direction: row;
         justify-content:space-evenly;
+        align-content:last baseline;
         column-gap: 15px;
         //The padding adds the space around the entire container rectangle, the space between the timeline-scope
         //is set in the html using the gutter modifier
         padding: 10px;
         background-color:#000000;
-    }
-
-    .services-grid-container .mat-mdc-card{
-        background-position: center;
-        width: 33%;
+        .mat-mdc-card{
+            background-position: center;
+            width: 33%;
+        }
+        .mat-mdc-card-header {
+            display: flex;
+            flex-direction: row;
+            padding-left: 10px;
+        }
         .mat-mdc-card-title {
             text-transform: uppercase;
+            font-size: clamp(50%, 16vw, 150%);
+        }
+        .mat-mdc-card-subtitle {
+            font-size: clamp(50%, 10vw, 125%);
+            color: rgb(73, 22, 155);
         }
         .mat-mdc-card-footer{
             text-align: center;
             font-weight: bold;
         }
     }
-    .service-card{
-        .development-service-image{
-            background-image: url('../../assets/images/webdev.jpg'); 
-        }
+}
+
+.design-service-card{
+    .development-service-image{
+        margin-bottom: 0px;
+        //If you want the image square instead of circle, uncomment.
+        //border-radius: 0px;
+        height: 50px;
+        width: 50px;
+        background-image: url('../../assets/images/Software Architecture Icon.jpg'); 
     }
 }
