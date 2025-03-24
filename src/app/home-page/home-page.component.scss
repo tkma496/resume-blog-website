@@ -75,42 +75,47 @@
     padding: 10px;
     background-color:#000000;
 }
-.service-card-container{
+.service-card{
     display: flex;
     direction: column;
     flex: 1 1 0;
     //background-position: center;
     width: 33%;
     height: 100%;
-    .mat-mdc-card.mdc-card{
-        flex: 1 1 0;
-        height: 100%;
-    }
+    //.mat-mdc-card.mdc-card{
+    //    flex: 1 1 auto;
+    //    height: 100%;
+    //}
     .mat-mdc-card-header {
         display: flex;
         flex-direction: row;
         padding-left: 10px;
+        flex: 1 1 auto;
     }
     .mat-mdc-card-title {
         text-transform: uppercase;
         font-size: clamp(50%, 16vw, 150%);
+        flex: 1 1 auto;
     }
     .mat-mdc-card-subtitle {
         font-size: clamp(50%, 10vw, 125%);
         color: rgb(73, 22, 155);
     }
+    .mat-mdc-card-content {
+        flex: 1 1 auto;
+    }
     .mat-mdc-card-footer{
-        text-align: center;
+        flex: 1 1 auto;
         font-weight: bold;
     }
 }
-.service-card-header-container, service-card-content-container{
+.service-card-header-container{
     display: flex;
     flex-direction: column;
     flex: 0 0 auto;
 }
 
-service-card-content-container{
+.service-card-content-container{
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
@@ -119,7 +124,6 @@ service-card-content-container{
 .service-card-footer-container {
     margin-top:auto;
 }
-
 
 .service-card#design{
     .design-service-image{

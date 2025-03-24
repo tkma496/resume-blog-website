@@ -275,6 +275,9 @@ mat-card {
   }
 
   .mat-mdc-card-footer{
+    display: flex;
+    direction: column;
+    justify-content: center;
     background-color:#ffea00;
     margin-top: auto;
     border:4px solid;
