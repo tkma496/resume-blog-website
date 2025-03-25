@@ -6,9 +6,13 @@
   }
 
   .app-container{
-    height:auto;
+    padding-top: var(--header-height, 0px);
     display: flex;
     flex-direction:column;
-    flex:1;
+    //flex:1;
     min-height: 100vh;
+    position: relative;
+    router-outlet + * {
+      flex: 1 0 auto;
+    }
   }

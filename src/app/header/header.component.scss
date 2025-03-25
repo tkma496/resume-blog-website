@@ -1,7 +1,12 @@
 :host {
-  display: flex;
-  align-items: flex-start;
-  background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;  // Ensures header stays above other content
+  //display: flex;
+  //align-items: flex-start;
+  //background-color: black;
   /*padding: 1rem;*/
   //z-index: 10;
   border-bottom: 2px solid grey;

@@ -30,7 +30,9 @@ export class AppComponent implements OnInit, OnDestroy{
   initLocomotiveScroll(): void {
     this.scroll = new LocomotiveScroll({
       el: document.querySelector('[app-container]') as HTMLElement,
-      smooth: true
+      smooth: true,
+      scrollFromAnywhere: true,
+      resetNativeScroll: true
     });
   }
   ngOnInit() {
