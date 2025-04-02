@@ -12,6 +12,50 @@
   border-bottom: 2px solid grey;
 }
 
+.mat-toolbar{
+  display: flex;
+  direction: row;
+  //align-content: baseline;
+}
+.about-me-button{
+  display: flex;
+  direction: column;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  align-content:center;
+  font-size: clamp(.5rem, 2vw, 10rem);
+  text-wrap: balance;
+}
+
+.home-icon{
+  display: flex;
+  direction: column;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  align-content:center;
+  font-size: clamp(.5rem, 2vw, 10rem);
+  text-wrap: balance;
+}
+
+.resume-button{
+  display: flex;
+  direction: column;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  align-content:center;
+  font-size: clamp(.5rem, 2vw, 9rem);
+  text-wrap: balance;
+}
+
+.blog-button{
+  display: flex;
+  direction: column;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  align-content:center;
+  font-size: clamp(.5rem, 2vw, 9rem);
+  text-wrap: balance;
+}
 
 .spacer {
     flex: 1 1 auto;

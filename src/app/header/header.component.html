@@ -2,15 +2,21 @@
     <button mat-icon-button class="menu-icon" matTooltip="Menu" aria-label="Menu">
         <mat-icon>menu</mat-icon>
     </button>
-    <span>Nolan Hansen</span>
+    <a mat-button class="about-me-button" routerLink="/about">Nolan Hansen</a>
     <span class="spacer"></span>
     <button mat-icon-button class="home-icon" matTooltip="Home" aria-label="Home" routerLink="/">
         <mat-icon>home</mat-icon>
     </button>
     <!--<a mat-button routerLink="/">Home</a>-->
-    <a mat-button routerLink="/resume">Resume</a>
-    <a mat-button routerLink="/blog">Blog</a>
-    <button mat-icon-button class="more-icon" matTooltip="More" aria-label="More">
+    <a mat-button class="resume-button" routerLink="/resume">Resume</a>
+    <a mat-button class="blog-button" routerLink="/blog">Blog</a>
+    <button mat-icon-button class="more-icon" matTooltip="More" aria-label="More" [matMenuTriggerFor]="menu">
         <mat-icon>more_vert</mat-icon>
     </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/">Home</button>
+        <button mat-menu-item routerLink="/about">About</button>
+        <button mat-menu-item routerLink="/resume">Resume</button>
+        <button mat-menu-item routerLink="/blog">Blog</button>
+    </mat-menu>
 </mat-toolbar>

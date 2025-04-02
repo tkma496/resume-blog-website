@@ -1,16 +1,16 @@
 :host {
-    display: flex;
-    flex-direction: column;
+    //display: flex;
+    //flex-direction: column;
+    display: block;
     min-height: 100vh;
     background-color: #000;
+    overflow-y: auto;
   }
 
   .app-container{
-    padding-top: var(--header-height, 0px);
+    padding-top: var(--header-height, 0rem);
     display: flex;
     flex-direction:column;
-    //flex:1;
-    min-height: 100vh;
     position: relative;
     router-outlet + * {
       flex: 1 0 auto;

@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "local": "ng serve --host 0.0.0.0 --port 8080",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "lint:fix": "ng lint . --fix"
   },
   "private": true,
   "dependencies": {
@@ -44,6 +45,12 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~5.0.2",
-    "typescript-eslint": "8.27.0"
+    "typescript-eslint": "8.27.0",
+    "@angular-eslint/eslint-plugin": "^17.0.0",
+    "@angular-eslint/eslint-plugin-template": "^17.0.0",
+    "@angular-eslint/schematics": "^17.0.0",
+    "@angular-eslint/template-parser": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0"
   }
 }

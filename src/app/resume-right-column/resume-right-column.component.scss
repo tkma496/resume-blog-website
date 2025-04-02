@@ -11,13 +11,13 @@
   }
   
   mat-list-item {
-    padding: 8px 0;
+    padding: .5rem 0;
   }
   .role{
     font-weight: bold;
   }
   .role-item {
-    margin-bottom: 16px; // Adds spacing between roles
+    margin-bottom: 1rem; // Adds spacing between roles
   }
   
   .duration {
@@ -26,5 +26,5 @@
   }
   
   .description {
-    margin-top: 8px; // Adds spacing between duration and description
+    margin-top: .5rem; // Adds spacing between duration and description
   }

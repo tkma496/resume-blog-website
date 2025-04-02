@@ -5,7 +5,16 @@ const angular = require("angular-eslint");
 
 module.exports = tseslint.config(
   {
+    ignores: ["**/dist/**", "**/node_modules/**"],
     files: ["**/*.ts"],
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        project: "./tsconfig.json",
+        ecmaVersion: 2022,
+        sourceType: "module",
+      },
+    },
     extends: [
       eslint.configs.recommended,
       ...tseslint.configs.recommended,

@@ -5,13 +5,26 @@
   height: 100%;
 }
 .left-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    row-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  row-gap: 1.25rem;
+  color: black;
+}
+.contact-list{
+  .mat-mdc-list-item{
+    color: black;
+    --mdc-list-list-item-label-text-color: black;
+    --mdc-list-list-item-hover-label-text-color: blue;
   }
-
-
+}
+.skills-list{
+  .mat-mdc-list-item{
+    color: black;
+    --mdc-list-list-item-label-text-color: black;
+    --mdc-list-list-item-hover-label-text-color: black;
+  }
+}
   .skill-item {
     display: flex;
     flex-direction: column;
@@ -23,11 +36,11 @@
   
   .rating-circles {
     display: flex;
-    gap: 4px; // Adds spacing between circles
+    gap: .25rem; // Adds spacing between circles
   }
   
   .circle {
-    font-size: 16px; // Adjust the size of the circles
+    font-size: 1rem; // Adjust the size of the circles
     color: #3f51b5; // Use Angular Material primary color or any color you prefer
   }
 

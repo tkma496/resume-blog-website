@@ -124,73 +124,73 @@ $typography-config: mat.define-typography-config(
   $headline-1: (
     font-family: $heading-font-family,
     font-weight: 400,
-    font-size: clamp(60px, 60px, 80px),
+    font-size: clamp(4rem, 4rem, 6rem),
     letter-spacing: .5px,
   ),
   $headline-2: (
     font-family: $heading-font-family,
     font-weight: 300,
-    font-size: clamp(45px, 45px, 60px),
+    font-size: clamp(2.5rem, 2.5rem, 4rem),
     letter-spacing: .5px,
   ), 
   $headline-3: (
     font-family: $heading-font-family,
     font-weight: 300,
-    font-size: clamp(35px, 35px, 45px),
+    font-size: clamp(2rem, 2rem, 2.5rem),
     letter-spacing: .5px,
   ),
   $headline-4: (
     font-family: $heading-font-family,
     font-weight: 300,
-    font-size: clamp(25px, 25px, 35px),
+    font-size: clamp(1.75rem, 1.75rem, 2rem),
     letter-spacing: .5px,
   ),
   $headline-5: (
     font-family: $heading-font-family,
     font-weight: 300,
-    font-size: clamp(20px, 20px, 25px),
+    font-size: clamp(1.25rem, 1.25rem, 1.75rem),
     letter-spacing: .5px,
   ),
   $headline-6: (
     font-family: $heading-font-family,
     font-weight: 300,
-    font-size: clamp(20px, 20px, 25px),
+    font-size: clamp(1.25rem, 1.25rem, 1.75rem),
     letter-spacing: .5px,
   ),
   $subtitle-1: (
     font-family: $subtitle-font-family,
     font-weight: 300,
-    font-size: clamp(18px, 18px, 20px),
+    font-size: clamp(1.1rem, 1.1rem, 1.5rem),
     letter-spacing: .5px,
   ),
   $subtitle-2: (
     font-family: $subtitle-font-family,
     font-weight: 300,
-    font-size: clamp(16px, 16px, 18px),
+    font-size: clamp(1rem, 1rem, 1.4rem),
     letter-spacing: .5px,
   ),
   $body-1: (
     font-family: $regular-font-family,
     font-weight: 400,
-    font-size: clamp(16px, 16px, 24px),
+    font-size: clamp(1rem, 1rem, 1.4rem),
     letter-spacing: .5px,
   ),
   $body-2: (
     font-family: $regular-font-family,
     font-weight: 400,
-    font-size: clamp(14px, 14px, 20px),
+    font-size: clamp(.9rem, .9rem, 1.3rem),
     letter-spacing: .5px,
   ),
   $caption: (
     font-family: $caption-font-family,
     font-weight: 300,
-    font-size: clamp(16px, 16px, 20px),
+    font-size: clamp(1rem, 1rem, 1.4rem),
     letter-spacing: .5px,
   ),
   $button: (
     font-family: $button-font-family,
     font-weight: 300,
-    font-size: clamp(14px, 14px, 18px),
+    font-size: clamp(.9rem, .9rem, 1.3rem),
     letter-spacing: .5px,
   ),
 );
@@ -249,11 +249,11 @@ body{
 }
 
 mat-card.mat-mdc-card.mdc-card {
-  border-radius: 10px;
+  border-radius: .7rem;
 }
 mat-card {
 
-  padding: 10px auto;
+  padding: .7rem auto;
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
@@ -261,14 +261,14 @@ mat-card {
   .mat-mdc-card-header{
     background-color:#ffea00;
     color: black;
-    border-radius: 10px 10px 0 0;
+    border-radius: .7rem .7rem 0 0;
     border:2px solid;
     flex-direction: column;
     flex: 1 1 auto;
     text-wrap: wrap;
-    padding-inline-start: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-inline-start: 1.25rem;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
   }
   .mat-card-subtitle {
     color: rgb(73, 22, 155);
@@ -278,6 +278,7 @@ mat-card {
     border-right: 2px solid;
     font-weight: bold;
     background-color: white;
+
   }
 
   .mat-mdc-card-footer{
@@ -287,7 +288,7 @@ mat-card {
     background-color:#ffea00;
     margin-top: auto;
     border: 2px solid;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: .7rem;
+    border-bottom-right-radius: .7rem;
   }
 }
