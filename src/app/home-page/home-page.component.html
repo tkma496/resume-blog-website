@@ -16,10 +16,13 @@
         </div>
     </mat-card>
     <mat-card class="services-card">
-        <mat-card-header class="services-card-header" [@slideIn]="animationState">
-            <mat-card-title>
-                Services
-            </mat-card-title>
+
+        <mat-card-header class="services-card-header">
+            <div #servicesCardTitle class="services-card-title">
+                <mat-card-title >
+                    Services
+                </mat-card-title>
+            </div>
         </mat-card-header>
         <div class="services-grid-container">
         <mat-card class="service-card" id="design" >
