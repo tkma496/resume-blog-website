@@ -13,11 +13,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
+  /*This code is used along with Material Animations to provide the slide-in
+  effect for a heading. However, unline when using GSAP and ScrollTrigger, it just slides in the second it crosses the line on the screen and can not be easily reversed. To control it with a scroll like Parallax that is where you need and Angular approved plug-in like GSAP.
   animations: [
     trigger('slideIn', [
       state('hidden', style({
         opacity: 0,
-        transform: 'translateX(-100px)'
+        transform: 'translateX(-10rem)'
       })),
       state('visible', style({
         opacity: 1,
@@ -27,7 +29,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
         animate('600ms ease-out')
       ])
     ])
-  ],
+  ],*/
 })
 
 export class HomePageComponent implements AfterViewInit {
@@ -58,8 +60,10 @@ export class HomePageComponent implements AfterViewInit {
     ngAfterViewInit(): void {
       gsap.registerPlugin(ScrollTrigger);
   
-      gsap.from(this.servicesCardTitle.nativeElement, {
-        x: -100,
+      /*This code performs a simple slide in from the side for the services
+      card title*/
+      /*gsap.from(this.servicesCardTitle.nativeElement, {
+        x: -500,
         opacity: 0,
         duration: 1,
         scrollTrigger: {
@@ -69,6 +73,47 @@ export class HomePageComponent implements AfterViewInit {
           scrub: true, // 👈 animation syncs with scroll
           markers: true // 👈 shows where trigger happens (for dev)
         }
-      });
+      });*/
+      /*This code performs a slide in from the side, but it is using the 
+      elastic.out ease to make the title bounce like its on the end of an 
+      elastic band*/
+      /*gsap.from(this.servicesCardTitle.nativeElement, {
+        x: -300,
+        opacity: 0,
+        duration: 1,
+        ease: "elastic.out(1.5,0.75)",
+        scrollTrigger: {
+          trigger: this.servicesCardTitle.nativeElement,
+          start: 'top 80%',
+          end: 'top 30%',
+          scrub: true, // 👈 animation syncs with scroll
+          markers: true // 👈 shows where trigger happens (for dev)
+        }
+      });*/
+
+      gsap.fromTo(this.servicesCardTitle.nativeElement,
+        { x: -100, opacity: 0,},
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: this.servicesCardTitle.nativeElement,
+            start: 'top 80%',
+            scrub: true,
+            markers: true, // 👈 shows where trigger happens (for dev)
+          },
+          onComplete: () => {
+            gsap.to(this.servicesCardTitle.nativeElement, {
+              opacity: 1,
+              x: '+=10',
+              repeat: 3,
+              yoyo: true,
+              duration: 0.1
+            });
+          }
+        }
+      );
     }
 }

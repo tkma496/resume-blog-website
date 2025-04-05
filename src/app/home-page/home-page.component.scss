@@ -219,3 +219,19 @@ mat-card.mat-mdc-card.mdc-card.services-card{
         background-image: url('../../assets/images/Software Architecture Icon.jpg'); 
     }
 }
+.mat-mdc-card.about-me-card{
+    margin: 0 0;
+    padding: 0 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    .mdc-card__media {
+        background: url('../../assets/images/about_me.jpg') center center no-repeat; 
+        background-size: cover;
+        align-items: flex-start;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+}
