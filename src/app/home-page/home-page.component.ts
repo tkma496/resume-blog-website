@@ -59,7 +59,12 @@ export class HomePageComponent implements AfterViewInit {
   }*/
     ngAfterViewInit(): void {
       gsap.registerPlugin(ScrollTrigger);
-  
+    
+      // 👇 Set global config BEFORE using ScrollTriggers
+    ScrollTrigger.config({
+      ignoreMobileResize: true,
+      autoRefreshEvents: 'DOMContentLoaded,load'
+    });
       /*This code performs a simple slide in from the side for the services
       card title*/
       /*gsap.from(this.servicesCardTitle.nativeElement, {
@@ -77,21 +82,22 @@ export class HomePageComponent implements AfterViewInit {
       /*This code performs a slide in from the side, but it is using the 
       elastic.out ease to make the title bounce like its on the end of an 
       elastic band*/
-      /*gsap.from(this.servicesCardTitle.nativeElement, {
+      gsap.from(this.servicesCardTitle.nativeElement, {
         x: -300,
         opacity: 0,
-        duration: 1,
-        ease: "elastic.out(1.5,0.75)",
+        duration: 5,
+        ease: "elastic.out(1.5,0.2)",
         scrollTrigger: {
           trigger: this.servicesCardTitle.nativeElement,
           start: 'top 80%',
           end: 'top 30%',
-          scrub: true, // 👈 animation syncs with scroll
+          toggleActions: "restart pause resume reverse", // no scrub!
+          //scrub: true, // 👈 animation syncs with scroll
           markers: true // 👈 shows where trigger happens (for dev)
         }
-      });*/
+      });
 
-      gsap.fromTo(this.servicesCardTitle.nativeElement,
+      /*gsap.fromTo(this.servicesCardTitle.nativeElement,
         { x: -100, opacity: 0,},
         {
           x: 0,
@@ -114,6 +120,26 @@ export class HomePageComponent implements AfterViewInit {
             });
           }
         }
-      );
-    }
+      );*/
+      /*gsap.from(this.servicesCardTitle.nativeElement,
+        { x: -100,
+          opacity: 0,
+          duration: 1,
+          ease: "elastic.out{1.5, 0.2}",
+          scrollTrigger: {
+            trigger: this.servicesCardTitle.nativeElement,
+            start: 'top 80%',
+            toggleActions: "play none none none", // no scrub
+            markers: true, // 👈 shows where trigger happens (for dev)
+          },
+          onEnter: () => {
+            gsap.to(this.servicesCardTitle.nativeElement, {
+              x: '+=10',
+              opacity: 1,
+              duration: 0.1,
+              ease: "elastic.out{1.5, .2}",
+
+            });*/
+          }
+      
 }
