@@ -1,7 +1,8 @@
 <div class="homepage-container">
     <mat-card class="homepage-title-card">
-        <div class="mdc-card__media mdc-card__media--16-9" >
-        </div>
+        <!--div class="mdc-card__media mdc-card__media--16-9" >
+        </div-->
+        <img [src]="homepageTitleImage" alt="Title" />
         <div class="homepage-title-card-overlay">
             <div class="homepage-title-card-overlay-box">
                 Complex<br>
@@ -27,7 +28,9 @@
         <mat-card class="service-card" id="design" >
             <div class="service-card-header-container">
                 <mat-card-header>
-                    <div mat-card-avatar class="design-service-image"></div>
+                    <div mat-card-avatar class="design-service-image">         
+                        <!--img src="../../assets/images/Software Architecture Icon.jpg" alt="Software Architecture"-->
+                    </div>
                     <div class="service-card-header-text">
                         <mat-card-title>Technology Architecture Services</mat-card-title>
                         <mat-card-subtitle>Complete Solution Design</mat-card-subtitle>
@@ -97,8 +100,11 @@
         </mat-card-footer>
     </mat-card>
     <mat-card class="about-me-card">
-        <div class="mdc-card__media mdc-card__media--16-9" >
-        </div>
+        <!--div class="mdc-card__media" >
+        </div-->
+        <!--div class="about-me-background"-->
+        <img [src]="aboutMeImageUrl" alt="About" />
+        <!--div-->
         <div class="about-me-card-overlay">
             <div class="about-me-text-container">
                 <div class="about-me-card-overlay-box">

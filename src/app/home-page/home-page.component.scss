@@ -17,15 +17,15 @@
     display: flex;
     flex-direction: column;
     border-radius: 0;
-    .mdc-card__media {
-        background: url('../../assets/images/Homepage HD belt.jpg') center center no-repeat; 
-        background-size: cover;
-        align-items: flex-start;
-        width: auto;
-        height: auto;
-        margin: 0;
-        padding: 0;
-    }
+//    .mdc-card__media {
+//        background: url('../../assets/images/Homepage HD belt.jpg') center center no-repeat; 
+//        background-size: cover;
+//        align-items: flex-start;
+//        width: auto;
+//        height: auto;
+//        margin: 0;
+//        padding: 0;
+//    }
 }
 
 .homepage-title-card-overlay {
@@ -91,9 +91,6 @@ mat-card.mat-mdc-card.mdc-card.services-card{
     flex-direction: row;
     justify-content:space-evenly;
     column-gap: .6rem;
-
-    //The padding adds the space around the entire container rectangle, the space between the timeline-scope
-    //is set in the html using the gutter modifier
     padding: 10px;
     background-color: black;
 }
@@ -179,10 +176,6 @@ mat-card.mat-mdc-card.mdc-card.services-card{
             text-align: center;
         }
     }
-
-    
-
-
     .mat-mdc-card-footer{
         flex: 1 1 auto;
         font-weight: bold;
@@ -194,6 +187,7 @@ mat-card.mat-mdc-card.mdc-card.services-card{
         margin-bottom: 0;
         //If you want the image square instead of circle, uncomment.
         //border-radius: 0;
+        border-radius: 20px;
         height: 50px;
         width: 50px;
         background-image: url('../../assets/images/Software Architecture Icon.jpg'); 
@@ -209,6 +203,7 @@ mat-card.mat-mdc-card.mdc-card.services-card{
         background-image: url('../../assets/images/Software Architecture Icon.jpg'); 
     }
 }
+
 .service-card#home-maintenance{
     .home-maintenance-service-image{
         margin-bottom: 0;
@@ -220,20 +215,20 @@ mat-card.mat-mdc-card.mdc-card.services-card{
     }
 }
 .mat-mdc-card.about-me-card{
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
-    height: auto;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     border-radius: 0;
-    .mdc-card__media {
-        background: url('../../assets/images/POWThin.jpg') center center no-repeat; 
-        background-size: 100%;
-        align-items: flex-start;
-        margin: 0;
-        padding: 0;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
 }
+
 .about-me-card-overlay {
     z-index: 10;  // Ensure it sits on top of the background image
     top: 0;
@@ -248,13 +243,13 @@ mat-card.mat-mdc-card.mdc-card.services-card{
 }
 .about-me-text-container{
     position: absolute;
-    top: 37%;
+    top: 31%;
     left: 0%;
     width: 100%;
 .about-me-card-overlay-box {
     position: absolute;
     top: 0%;
-    left: 20%;
+    left: 22%;
     width: 20%;
     font-size: clamp(.5rem,14vw,14rem);
 }
@@ -262,7 +257,7 @@ mat-card.mat-mdc-card.mdc-card.services-card{
 .about-me-card-overlay-box-2 {
     position: absolute;
     top: 0%;
-    left: 56%;
+    left: 58%;
     width: 30%;
     font-size: clamp(.5rem,14vw,14rem);
 }
