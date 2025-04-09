@@ -16,8 +16,6 @@ export class HomePageComponent implements AfterViewInit {
   homepageTitleImage="../../assets/images/Homepage HD belt.jpg";
 
   ngAfterViewInit(): void {
-
-
     requestAnimationFrame(() => {
       gsap.utils.toArray<HTMLElement>('.servicesCardTitle').forEach((el) => {
         gsap.from(el, {
